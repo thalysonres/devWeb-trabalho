@@ -26,4 +26,7 @@ app.use('/users', usersRouter);
 const prateleira = require('./routes/prateleira');
 app.use('/prateleira', prateleira);
 
+const estudante = require('./routes/estudante')
+app.use('/estudante', estudante)
+
 module.exports = app;
