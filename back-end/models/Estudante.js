@@ -15,7 +15,8 @@ const esquema = mongoose.Schema ({
 	},
 	cpf: {
 		type: String,
-		required: true
+        required: true,
+        index: { unique: true }
 	},
 	senha: {
 		type: String,
@@ -23,6 +24,15 @@ const esquema = mongoose.Schema ({
 	},
 	email: {
 		type: String,
+        required: true,
+        index: { unique: true }        
+    },
+    data_nascimento: {
+		type: Date,
+		required: true
+	},
+    data_cadastro: {
+		type: Date,
 		required: true
 	}
 })

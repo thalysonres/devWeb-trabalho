@@ -26,7 +26,19 @@ app.use('/users', usersRouter);
 const prateleira = require('./routes/prateleira');
 app.use('/prateleira', prateleira);
 
-const estudante = require('./routes/estudante')
-app.use('/estudante', estudante)
+const estudante = require('./routes/estudante');
+app.use('/estudante', estudante);
+
+const bibliotecaria = require('./routes/bibliotecaria');
+app.use('/bibliotecaria', bibliotecaria);
+
+const autor = require('./routes/autor');
+app.use('/autor', autor);
+
+const obra = require('./routes/obra');
+app.use('/obra', obra);
+
+const emprestimo = require('./routes/emprestimo');
+app.use('/emprestimo', emprestimo);
 
 module.exports = app;

@@ -1,10 +1,10 @@
-const Estudante = require('../models/Estudante');
+const Emprestimo = require('../models/Emprestimo');
 
 const controller = {};
 
 controller.novo = async (req, res) => {
     try{
-        await Estudante.create(req.body);
+        await Emprestimo.create(req.body);
         res.status(201).end();
     }
     catch(erro){
@@ -15,7 +15,10 @@ controller.novo = async (req, res) => {
 
 controller.listar = async (req, res) => {
     try{
-        let dados = await Estudante.find();
+        let dados = await Emprestimo.find()
+            .populate('estudante', 'nome email')
+            .populate('bibliotecaria', 'nome')
+            .populate('obra', 'titulo autor prateleira');
         res.send(dados);
     }
     catch(erro){
@@ -27,7 +30,7 @@ controller.listar = async (req, res) => {
 controller.obterUm = async (req, res) => {
     try{
         const id = req.params.id; // captura o id da URL
-        let obj = await Estudante.findById(id);
+        let obj = await Emprestimo.findById(id);
 
         if (obj) res.send(obj);
         else res.status(404).end();
@@ -41,7 +44,7 @@ controller.obterUm = async (req, res) => {
 controller.atualizar = async (req, res) => {
     try{
         const id = req.body._id;
-        let ret = await Estudante.findByIdAndUpdate(id, req.body);
+        let ret = await Emprestimo.findByIdAndUpdate(id, req.body);
         
         if(ret) res.status(204).end();
         else res.status(404).end();
@@ -55,7 +58,7 @@ controller.atualizar = async (req, res) => {
 controller.excluir = async (req, res) => {
     try{
         const id = req.body._id;
-        let ret = await Estudante.findByIdAndDelete(id);
+        let ret = await Emprestimo.findByIdAndDelete(id);
 
         if(ret) res.status(204).end();
         else res.status(404).end();
