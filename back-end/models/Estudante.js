@@ -33,7 +33,13 @@ const esquema = mongoose.Schema ({
 	},
     data_cadastro: {
 		type: Date,
-		required: true
+        required: true,
+        validate: {
+            validator: function(valor) {
+                return valor > this.data_nascimento
+            },
+            message: () => 'A data de cadastro deve ser maior que a data de nascimento.' 
+        }
     },
     bibliotecaria: {
         type: mongoose.ObjectId,
