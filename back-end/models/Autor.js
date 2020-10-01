@@ -5,21 +5,16 @@ const esquema = mongoose.Schema({
         type: String,
         required: true
     },
-    telefone: {
+    pais_origem: {
         type: String,
         required: true
     },
-    endereco: {
+    genero: {
         type: String,
         required: true
     },
-    cpf: {
+    resumo: {
         type: String,
-        required: true,
-        index: { unique: true }
-    },
-    data_nascimento: {
-        type: Date,
         required: true
     }
 });

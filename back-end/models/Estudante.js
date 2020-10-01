@@ -34,7 +34,12 @@ const esquema = mongoose.Schema ({
     data_cadastro: {
 		type: Date,
 		required: true
-	}
+    },
+    bibliotecaria: {
+        type: mongoose.ObjectId,
+        ref: 'Bibliotecaria',
+        required: true
+    }
 })
 
-module.exports = mongoose.model( 'Estudante', esquema, 'estudante' )
+module.exports = mongoose.model( 'Estudante', esquema, 'estudantes' )

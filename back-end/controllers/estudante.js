@@ -15,7 +15,8 @@ controller.novo = async (req, res) => {
 
 controller.listar = async (req, res) => {
     try{
-        let dados = await Estudante.find();
+        let dados = await Estudante.find()
+            .populate('bibliotecaria', 'nome');
         res.send(dados);
     }
     catch(erro){

@@ -13,7 +13,7 @@ const esquema = mongoose.Schema({
             validator: function(valor) {
                 return valor >= this.data_emprestimo
             },
-            message: () => 'A data de devolução deve ser maior ou guál a data de empréstimo.' 
+            message: () => 'A data de devolução deve ser maior ou igual à data de empréstimo.' 
         }
     },
     estudante: {
