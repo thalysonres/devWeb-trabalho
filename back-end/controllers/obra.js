@@ -16,7 +16,7 @@ controller.novo = async (req, res) => {
 controller.listar = async (req, res) => {
     try{
         let dados = await Obra.find()
-            .populate('autor', 'nome')
+            .populate('escritor', 'nome')
             .populate('prateleira');
         res.send(dados);
     }

@@ -32,8 +32,8 @@ app.use('/estudante', estudante);
 const bibliotecaria = require('./routes/bibliotecaria');
 app.use('/bibliotecaria', bibliotecaria);
 
-const autor = require('./routes/autor');
-app.use('/autor', autor);
+const escritor = require('./routes/escritor');
+app.use('/escritor', escritor);
 
 const obra = require('./routes/obra');
 app.use('/obra', obra);

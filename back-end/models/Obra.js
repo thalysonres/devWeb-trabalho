@@ -29,9 +29,9 @@ const esquema = mongoose.Schema({
         type: String,
         required: true
     },
-    autor: {
+    escritor: {
         type: mongoose.ObjectId,
-        ref: 'Autor',
+        ref: 'Escritor',
         required: true
     },
     prateleira: {

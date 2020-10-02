@@ -19,4 +19,4 @@ const esquema = mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('Autor', esquema, 'autores');
+module.exports = mongoose.model('Escritor', esquema, 'escritores');
