@@ -65,5 +65,4 @@ controller.excluir = async (req, res) => {
         res.status(500).send(erro); 
     }
 }
-
 module.exports = controller;

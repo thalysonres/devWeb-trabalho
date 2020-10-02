@@ -7,15 +7,15 @@ const esquema = mongoose.Schema({
     },
     pais_origem: {
         type: String,
-        required: false
+        required: true
     },
     genero: {
         type: String,
-        required: false
+        required: true
     },
     resumo: {
         type: String,
-        required: false
+        required: true
     }
 });
 
