@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -25,7 +26,8 @@ import { PrateleiraListComponent } from './prateleira/prateleira-list/prateleira
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -14,6 +14,10 @@ db(`mongodb+srv://${dbUser}:${dbPass}@cluster0.f1mwk.gcp.mongodb.net/${dbName}?r
 
 var app = express();
 
+
+const cors = require('cors')
+app.use( cors() )
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

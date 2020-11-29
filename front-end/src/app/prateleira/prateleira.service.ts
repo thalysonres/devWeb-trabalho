@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 export class PrateleiraService {
 
   private apiServer = environment.apiService
-  private apiUri: string = this.apiServer + 'turma'
+  private apiUri: string = this.apiServer + 'prateleira'
 
   constructor(private http: HttpClient) { }
 
