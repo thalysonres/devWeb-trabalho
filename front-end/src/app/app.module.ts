@@ -12,6 +12,8 @@ import {MatToolbarModule} from '@angular/material/toolbar'
 
 import { MaterialModule } from './material/material.module';
 import { PrateleiraListComponent } from './prateleira/prateleira-list/prateleira-list.component';
+import { PrateleiraFormComponent } from './prateleira/prateleira-form/prateleira-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { PrateleiraListComponent } from './prateleira/prateleira-list/prateleira
     MainFooterComponent,
     MainMenuComponent,
     MainToolbarComponent,
-    PrateleiraListComponent
+    PrateleiraListComponent,
+    PrateleiraFormComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,9 @@ import { PrateleiraListComponent } from './prateleira/prateleira-list/prateleira
     BrowserAnimationsModule,
     MatToolbarModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

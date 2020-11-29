@@ -1,0 +1,30 @@
+<h1>{{ title }}</h1>
+
+<form class="std-form" #f="ngForm" (ngSubmit)="salvar(f)">
+
+	<mat-form-field>
+		<mat-label>Estante</mat-label>
+		<input matInput placeholder="Informe o nome da estante"
+      [(ngModel)]="prateleira.estante" name="estante" required>
+  </mat-form-field>
+
+		<mat-form-field>
+			<mat-label>corredor</mat-label>
+			<input
+       matInput [(ngModel)]="prateleira.corredor"
+      placeholder="Informe o corredor"
+      name="corredor" rows="3" required>
+		</mat-form-field>
+
+  <mat-toolbar class="form-buttons">
+      <mat-toolbar-row>
+         <button mat-raised-button type="submit" color="accent">
+            Salvar
+         </button>
+         <button mat-raised-button type="button" (click)="voltar(f)">
+            Voltar
+         </button>
+      </mat-toolbar-row>
+   </mat-toolbar>
+
+</form>
