@@ -14,6 +14,10 @@ import { MaterialModule } from './material/material.module';
 import { PrateleiraListComponent } from './prateleira/prateleira-list/prateleira-list.component';
 import { PrateleiraFormComponent } from './prateleira/prateleira-form/prateleira-form.component';
 import { FormsModule } from '@angular/forms';
+import { BibliotecariaListComponent } from './bibliotecaria/bibliotecaria-list/bibliotecaria-list.component';
+import { BibliotecariaFormComponent } from './bibliotecaria/bibliotecaria-form/bibliotecaria-form.component';
+import { AutorListComponent } from './autor/autor-list/autor-list.component';
+import { AutorFormComponent } from './autor/autor-form/autor-form.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { FormsModule } from '@angular/forms';
     MainMenuComponent,
     MainToolbarComponent,
     PrateleiraListComponent,
-    PrateleiraFormComponent
+    PrateleiraFormComponent,
+    BibliotecariaListComponent,
+    BibliotecariaFormComponent,
+    AutorListComponent,
+    AutorFormComponent
   ],
   imports: [
     BrowserModule,
