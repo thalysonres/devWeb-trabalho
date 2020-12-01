@@ -1,3 +1,4 @@
+import { BibliotecariaFormComponent } from './bibliotecaria/bibliotecaria-form/bibliotecaria-form.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PrateleiraListComponent } from './prateleira/prateleira-list/prateleira-list.component';
@@ -19,6 +20,12 @@ const routes: Routes = [
   },{
     path: 'bibliotecaria',
     component: BibliotecariaListComponent
+  },{
+    path: 'bibliotecaria/nova',
+    component: BibliotecariaFormComponent
+  },{
+    path: 'bibliotecaria/:id',
+    component: BibliotecariaFormComponent
   }
 ];
 
