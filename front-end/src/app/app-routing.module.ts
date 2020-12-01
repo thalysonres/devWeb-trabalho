@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PrateleiraListComponent } from './prateleira/prateleira-list/prateleira-list.component';
 import { PrateleiraFormComponent } from './prateleira/prateleira-form/prateleira-form.component';
+import { BibliotecariaListComponent } from './bibliotecaria/bibliotecaria-list/bibliotecaria-list.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,9 @@ const routes: Routes = [
   {
     path: 'prateleira/:id',
     component: PrateleiraFormComponent
+  },{
+    path: 'bibliotecaria',
+    component: BibliotecariaListComponent
   }
 ];
 
