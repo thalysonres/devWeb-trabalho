@@ -24,6 +24,9 @@ import { EmprestimoListComponent } from './emprestimo/emprestimo-list/emprestimo
 import { EmprestimoFormComponent } from './emprestimo/emprestimo-form/emprestimo-form.component';
 import { EstudanteFormComponent } from './estudante/estudante-form/estudante-form.component';
 import { EstudanteListComponent } from './estudante/estudante-list/estudante-list.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatMomentDateModule, MAT_MOMENT_DATE_FORMATS, MAT_MOMENT_DATE_ADAPTER_OPTIONS } from '@angular/material-moment-adapter';
+import { Moment } from 'moment'
 
 @NgModule({
   declarations: [
@@ -52,6 +55,8 @@ import { EstudanteListComponent } from './estudante/estudante-list/estudante-lis
     MaterialModule,
     HttpClientModule,
     FormsModule,
+    MatDatepickerModule,
+    MatMomentDateModule,
 
   ],
   providers: [],

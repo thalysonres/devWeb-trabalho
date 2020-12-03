@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { AutorService } from '../autor.service';
 import { NgForm } from '@angular/forms';
-
+import { from } from 'rxjs';
 import { Location } from '@angular/common';
 
 @Component({

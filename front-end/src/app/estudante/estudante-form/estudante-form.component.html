@@ -1,1 +1,79 @@
-<p>estudante-form works!</p>
+<h1>{{ title }}</h1>
+
+<form class="std-form" #f="ngForm" (ngSubmit)="salvar(f)">
+
+	<mat-form-field>
+		<mat-label>Nome</mat-label>
+		<input matInput placeholder="Informe o nome do estudante"
+      [(ngModel)]="estudante.nome" name="nome" required>
+  </mat-form-field>
+
+  <mat-form-field>
+		<mat-label>Telefone</mat-label>
+		<input matInput placeholder="Informe o telefone"
+      [(ngModel)]="estudante.telefone" name="telefone" required>
+  </mat-form-field>
+
+  <mat-form-field>
+		<mat-label>Endereço</mat-label>
+		<input matInput placeholder="Informe o endereco"
+      [(ngModel)]="estudante.endereco" name="endereco" required>
+  </mat-form-field>
+
+  <mat-form-field>
+		<mat-label>CPF</mat-label>
+		<input matInput placeholder="Informe o cpf"
+      [(ngModel)]="estudante.cpf" name="cpf" required>
+  </mat-form-field>
+
+  <mat-form-field>
+		<mat-label>Senha</mat-label>
+		<input matInput placeholder="Informe a senha"
+      [(ngModel)]="estudante.senha" name="senha" required>
+  </mat-form-field>
+
+  <mat-form-field>
+		<mat-label>E-mail</mat-label>
+		<input matInput placeholder="Informe o email"
+      [(ngModel)]="estudante.email" name="email" required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Data de nascimento</mat-label>
+    <input matInput [matDatepicker]="dataNascimento" name="data_nascimento"
+    [(ngModel)]="estudante.data_nascimento" placeholder="Informe a data de nascimento"
+    required>
+    <mat-datepicker-toggle matSuffix [for]="dataNascimento"></mat-datepicker-toggle>
+    <mat-datepicker #dataNascimento></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Data de cadastro</mat-label>
+    <input matInput [matDatepicker]="dataCadastro" name="data_cadastro"
+    [(ngModel)]="estudante.data_cadastro" placeholder="Informe a data de cadastro"
+    required>
+    <mat-datepicker-toggle matSuffix [for]="dataCadastro"></mat-datepicker-toggle>
+    <mat-datepicker #dataCadastro></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Bicliotecária</mat-label>
+    <mat-select [(ngModel)]="estudante.bibliotecaria" name="bibliotecaria" required>
+      <mat-option *ngFor="let bibliotecaria of bibliotecarias" [value]="bibliotecaria._id">
+      {{ bibliotecaria.nome }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-toolbar class="form-buttons">
+      <mat-toolbar-row>
+         <button mat-raised-button type="submit" color="accent">
+            Salvar
+         </button>
+         <button mat-raised-button type="button" (click)="voltar(f)">
+            Voltar
+         </button>
+      </mat-toolbar-row>
+   </mat-toolbar>
+
+</form>
