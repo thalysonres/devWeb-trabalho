@@ -18,6 +18,12 @@ import { BibliotecariaListComponent } from './bibliotecaria/bibliotecaria-list/b
 import { BibliotecariaFormComponent } from './bibliotecaria/bibliotecaria-form/bibliotecaria-form.component';
 import { AutorListComponent } from './autor/autor-list/autor-list.component';
 import { AutorFormComponent } from './autor/autor-form/autor-form.component';
+import { ObraListComponent } from './obra/obra-list/obra-list.component';
+import { ObraFormComponent } from './obra/obra-form/obra-form.component';
+import { EmprestimoListComponent } from './emprestimo/emprestimo-list/emprestimo-list.component';
+import { EmprestimoFormComponent } from './emprestimo/emprestimo-form/emprestimo-form.component';
+import { EstudanteFormComponent } from './estudante/estudante-form/estudante-form.component';
+import { EstudanteListComponent } from './estudante/estudante-list/estudante-list.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +36,13 @@ import { AutorFormComponent } from './autor/autor-form/autor-form.component';
     BibliotecariaListComponent,
     BibliotecariaFormComponent,
     AutorListComponent,
-    AutorFormComponent
+    AutorFormComponent,
+    ObraListComponent,
+    ObraFormComponent,
+    EmprestimoListComponent,
+    EmprestimoFormComponent,
+    EstudanteFormComponent,
+    EstudanteListComponent
   ],
   imports: [
     BrowserModule,
