@@ -55,6 +55,7 @@ export class AutorFormComponent implements OnInit {
                 // 1 - salvar os dados no back-end
                 await this.servAut.novo(this.autor)
                 // 2 - dar o feedback para o usuario
+                console.log('goooooooooooooooo', this.autor)
                 this.snackBar.open('Dados salvos com sucesso!!!', 'X', {
                     duration: 5000
                 })
