@@ -6,6 +6,12 @@ import { PrateleiraListComponent } from './prateleira/prateleira-list/prateleira
 import { PrateleiraFormComponent } from './prateleira/prateleira-form/prateleira-form.component';
 import { BibliotecariaListComponent } from './bibliotecaria/bibliotecaria-list/bibliotecaria-list.component';
 import { AutorFormComponent } from './autor/autor-form/autor-form.component';
+import { EstudanteListComponent } from './estudante/estudante-list/estudante-list.component';
+import { EstudanteFormComponent } from './estudante/estudante-form/estudante-form.component';
+import { EmprestimoListComponent } from './emprestimo/emprestimo-list/emprestimo-list.component';
+import { EmprestimoFormComponent } from './emprestimo/emprestimo-form/emprestimo-form.component';
+import { ObraListComponent } from './obra/obra-list/obra-list.component';
+import { ObraFormComponent } from './obra/obra-form/obra-form.component';
 
 const routes: Routes = [
   {
@@ -44,6 +50,42 @@ const routes: Routes = [
     path: 'autor/:id',
     component: AutorFormComponent
   },
+  {
+    path: 'estudante',
+    component: EstudanteListComponent
+  },
+  {
+    path: 'estudante/novo',
+    component: EstudanteFormComponent
+  },
+  {
+    path: 'estudante/:id',
+    component: EstudanteFormComponent
+  },
+  {
+    path: 'emprestimo',
+    component: EmprestimoListComponent
+  },
+  {
+    path: 'emprestimo/novo',
+    component: EmprestimoFormComponent
+  },
+  {
+    path: 'emprestimo/:id',
+    component: EmprestimoFormComponent
+  },
+  {
+    path: 'obra',
+    component: ObraListComponent
+  },
+  {
+    path: 'obra/novo',
+    component: ObraFormComponent
+  },
+  {
+    path: 'obra/:id',
+    component: ObraFormComponent
+  }
 ];
 
 @NgModule({
