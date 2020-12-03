@@ -1,4 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
-
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+#content {
+    margin: 40px;
+}
+.mat-table {
+    width: 100%;
+}
+.cell-align-right {
+    text-align: right;
+}
+.cell-align-center {
+    text-align: center !important;
+}
+
+//Desaparecer com os botões editar e excluir
+.mat-row .mat-raised-button{
+    visibility: hidden;
+}
+
+//Reexibe os botões na linha sob o cursor do mouse
+.mat-row:hover .mat-raised-button {
+    visibility: visible;
+}
+
+//Destaca a linha sob o mouse
+.mat-row:hover{
+    filter: brightness(110%);
+}
+
+.new-item{
+    background-color: transparent;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    justify-content: flex-end;
+
+    a{
+        font-size: 110%;
+    }
+
+}
+
+.std-form{
+    max-width: 80%;
+    margin: 0 auto;
+
+    mat-form-field{
+        min-width: 150px;
+        max-width: 500px;
+        width: 100%;
+        margin-right: 30px;
+    }
+}
+.form-buttons{
+    background: transparent;
+    mat-toolbar-row{
+        display: flex;
+        justify-content: space-around;
+    }
+}

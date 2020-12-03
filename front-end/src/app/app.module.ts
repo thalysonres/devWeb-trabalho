@@ -27,6 +27,7 @@ import { EstudanteListComponent } from './estudante/estudante-list/estudante-lis
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatMomentDateModule, MAT_MOMENT_DATE_FORMATS, MAT_MOMENT_DATE_ADAPTER_OPTIONS } from '@angular/material-moment-adapter';
 import { Moment } from 'moment'
+import { NgxMaskModule, IConfig } from 'ngx-mask'
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { Moment } from 'moment'
     FormsModule,
     MatDatepickerModule,
     MatMomentDateModule,
+    NgxMaskModule.forRoot()
 
   ],
   providers: [],
