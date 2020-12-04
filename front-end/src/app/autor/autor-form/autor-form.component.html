@@ -2,7 +2,7 @@
 
 <form class="std-form" #f="ngForm" (ngSubmit)="salvar(f)">
 
-	<mat-form-field>
+	<mat-form-field  class="maior">
 		<mat-label>Nome</mat-label>
 		<input matInput placeholder="Informe o nome do autor"
       [(ngModel)]="autor.nome" name="nome" required>
