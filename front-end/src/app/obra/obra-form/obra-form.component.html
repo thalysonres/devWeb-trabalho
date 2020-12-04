@@ -1,1 +1,76 @@
-<p>obra-form works!</p>
+<h1>{{ title }}</h1>
+
+<form class="std-form" #f="ngForm" (ngSubmit)="salvar(f)">
+
+	<mat-form-field>
+		<mat-label>Titulo</mat-label>
+		<input matInput placeholder="Informe o titulo da obra"
+      [(ngModel)]="obra.titulo" name="titulo" required>
+  </mat-form-field>
+
+  <mat-form-field>
+		<mat-label>Edição</mat-label>
+		<input matInput placeholder="Informe a edicao"
+      [(ngModel)]="obra.edicao" name="edicao" required>
+  </mat-form-field>
+
+  <mat-form-field>
+		<mat-label>Ano Edicao</mat-label>
+		<input matInput placeholder="Informe o ano edicao"
+      [(ngModel)]="obra.ano_edicao" name="ano_edicao" required>
+  </mat-form-field>
+
+  <mat-form-field>
+		<mat-label>Numero página</mat-label>
+		<input matInput placeholder="Informe o numero de pagina"
+      [(ngModel)]="obra.num_paginas" name="num_paginas" required>
+  </mat-form-field>
+
+  <mat-form-field>
+		<mat-label>Numero de cópia</mat-label>
+		<input matInput placeholder="Informe o numero copias"
+      [(ngModel)]="obra.num_copias" name="num_copias" required>
+  </mat-form-field>
+
+  <mat-form-field>
+		<mat-label>Editora</mat-label>
+		<input matInput placeholder="Informe a editora"
+      [(ngModel)]="obra.editora" name="editora" required>
+  </mat-form-field>
+
+  <mat-form-field>
+		<mat-label>Tema</mat-label>
+		<input matInput placeholder="Informe a tema"
+      [(ngModel)]="obra.tema" name="tema" required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Autor</mat-label>
+    <mat-select [(ngModel)]="obra.escritor" name="autor" required>
+      <mat-option *ngFor="let autor of autores" [value]="autor._id">
+      {{ autor.nome }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Prateleira</mat-label>
+    <mat-select [(ngModel)]="obra.prateleira" name="prateleira" required>
+      <mat-option *ngFor="let prateleira of prateleiras" [value]="prateleira._id">
+      {{ prateleira.corredor }} | {{ prateleira.estante }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-toolbar class="form-buttons">
+      <mat-toolbar-row>
+         <button mat-raised-button type="submit" color="accent">
+            Salvar
+         </button>
+         <button mat-raised-button type="button" (click)="voltar(f)">
+            Voltar
+         </button>
+      </mat-toolbar-row>
+   </mat-toolbar>
+
+</form>
