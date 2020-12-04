@@ -13,7 +13,7 @@ import { Location } from '@angular/common';
 })
 export class AutorFormComponent implements OnInit {
 
-  autor: any = []
+  autor: any = {}
 
   title: string = 'Novo autor'
 
