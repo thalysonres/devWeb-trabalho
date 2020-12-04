@@ -1,1 +1,62 @@
-<p>emprestimo-form works!</p>
+<h1>{{ title }}</h1>
+
+<form class="std-form" #f="ngForm" (ngSubmit)="salvar(f)">
+
+  <mat-form-field>
+    <mat-label>Data de Emprestimo</mat-label>
+    <input matInput [matDatepicker]="dataEmprestimo" name="data_emprestimo"
+    [(ngModel)]="emprestimo.data_emprestimo" placeholder="Informe a data de nascimento"
+    required>
+    <mat-datepicker-toggle matSuffix [for]="dataEmprestimo"></mat-datepicker-toggle>
+    <mat-datepicker #dataEmprestimo></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Data de devolucao</mat-label>
+    <input matInput [matDatepicker]="dataDevolucao" name="data_devolucao"
+    [(ngModel)]="emprestimo.data_devolucao" placeholder="Informe a data de cadastro"
+    required>
+    <mat-datepicker-toggle matSuffix [for]="dataDevolucao"></mat-datepicker-toggle>
+    <mat-datepicker #dataDevolucao></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Estudante</mat-label>
+    <mat-select [(ngModel)]="emprestimo.estudante" name="estudante" required>
+      <mat-option *ngFor="let estudante of estudantes" [value]="estudante._id">
+      {{ estudante.nome }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Bibliotecaria</mat-label>
+    <mat-select [(ngModel)]="emprestimo.bibliotecaria" name="bibliotecaria" required>
+      <mat-option *ngFor="let bibliotecaria of bibliotecarias" [value]="bibliotecaria._id">
+      {{ bibliotecaria.nome }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Obra</mat-label>
+    <mat-select [(ngModel)]="emprestimo.obra" name="obra" required>
+      <mat-option *ngFor="let obra of obras" [value]="obra._id">
+      {{ obra.titulo }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-toolbar class="form-buttons">
+      <mat-toolbar-row>
+         <button mat-raised-button type="submit" color="accent">
+            Salvar
+         </button>
+         <button mat-raised-button type="button" (click)="voltar(f)">
+            Voltar
+         </button>
+      </mat-toolbar-row>
+   </mat-toolbar>
+
+</form>
+

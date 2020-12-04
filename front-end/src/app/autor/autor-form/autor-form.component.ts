@@ -41,29 +41,21 @@ export class AutorFormComponent implements OnInit {
     if(form.valid){
 
         try{
-
-            // se o prateleira ja exiestir (caso de edicao), ele ja tera
-            // o atributo _id
-
-            if(this.autor._id){
-                await this.servAut.atualizar(this.autor) // atualizacao
-                this.snackBar.open('Dados ATUALIZADOS com sucesso!!!', 'X', {
-                    duration: 5000
-                })
-                // this.location.back()
-            }else{
-                // 1 - salvar os dados no back-end
-                await this.servAut.novo(this.autor)
-                // 2 - dar o feedback para o usuario
-                console.log('goooooooooooooooo', this.autor)
-                this.snackBar.open('Dados salvos com sucesso!!!', 'X', {
-                    duration: 5000
-                })
-                // 3 - voltar ao componente de listagem
-
+          if(this.autor._id){
+              await this.servAut.atualizar(this.autor) // atualizacao
+              this.snackBar.open('Dados ATUALIZADOS com sucesso!!!', 'X', {
+                   duration: 5000
+              })
+          }else{
+              await this.servAut.novo(this.autor)
+              // 2 - dar o feedback para o usuario
+              console.log('goooooooooooooooo', this.autor)
+              this.snackBar.open('Dados salvos com sucesso!!!', 'X', {
+                  duration: 5000
+              })
             }
 
-            this.location.back()
+          this.location.back()
         }
         catch(erro){
             console.log(erro)
@@ -71,8 +63,6 @@ export class AutorFormComponent implements OnInit {
                 duration: 5000
             })
         }
-
-
     }
   }
 
