@@ -31,7 +31,7 @@ constructor(private servPrat: PrateleiraService, private snackBar: MatSnackBar, 
 
         }catch(erro){
               console.log(erro)
-              this.snackBar.open('ERRO: nao foi possivel carregar dados para edicao', 'X(', {
+              this.snackBar.open('ERRO: nao foi possivel carregar dados para edicao', ' X( ', {
                   duration: 5000
               })
           }

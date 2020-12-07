@@ -1,4 +1,3 @@
-import { AutorListComponent } from './autor/autor-list/autor-list.component';
 import { BibliotecariaFormComponent } from './bibliotecaria/bibliotecaria-form/bibliotecaria-form.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -6,6 +5,7 @@ import { PrateleiraListComponent } from './prateleira/prateleira-list/prateleira
 import { PrateleiraFormComponent } from './prateleira/prateleira-form/prateleira-form.component';
 import { BibliotecariaListComponent } from './bibliotecaria/bibliotecaria-list/bibliotecaria-list.component';
 import { AutorFormComponent } from './autor/autor-form/autor-form.component';
+import { AutorListComponent } from './autor/autor-list/autor-list.component';
 import { EstudanteListComponent } from './estudante/estudante-list/estudante-list.component';
 import { EstudanteFormComponent } from './estudante/estudante-form/estudante-form.component';
 import { EmprestimoListComponent } from './emprestimo/emprestimo-list/emprestimo-list.component';

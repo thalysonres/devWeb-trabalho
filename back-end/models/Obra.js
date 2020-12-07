@@ -14,7 +14,7 @@ const esquema = mongoose.Schema({
         required: false
     },
     num_paginas: {
-        type: String,
+        type: Number,
         required: true
     },
     num_copias: {
