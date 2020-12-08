@@ -31,7 +31,7 @@ constructor(private servPrat: PrateleiraService, private snackBar: MatSnackBar, 
 
         }catch(erro){
               console.log(erro)
-              this.snackBar.open('ERRO: nao foi possivel carregar dados para edicao', ' X( ', {
+              this.snackBar.open('ERRO: não foi possível carregar dados para edição', 'X', {
                   duration: 5000
               })
           }
@@ -48,7 +48,7 @@ constructor(private servPrat: PrateleiraService, private snackBar: MatSnackBar, 
 
             if(this.prateleira._id){
                 await this.servPrat.atualizar(this.prateleira) // atualizacao
-                this.snackBar.open('Dados ATUALIZADOS com sucesso!!!', 'X', {
+                this.snackBar.open('Dados atualizados com sucesso!!!', 'X', {
                     duration: 5000
                 })
                 // this.location.back()
@@ -60,19 +60,16 @@ constructor(private servPrat: PrateleiraService, private snackBar: MatSnackBar, 
                     duration: 5000
                 })
                 // 3 - voltar ao componente de listagem
-
             }
 
             this.location.back()
         }
         catch(erro){
             console.log(erro)
-            this.snackBar.open('ERRO: nao foi possivel salvar', 'X(', {
+            this.snackBar.open('ERRO: não foi possível salvar', 'X', {
                 duration: 5000
             })
         }
-
-
     }
   }
 
@@ -85,6 +82,5 @@ constructor(private servPrat: PrateleiraService, private snackBar: MatSnackBar, 
     }
     if(result) this.location.back()
   }
-
 
 }

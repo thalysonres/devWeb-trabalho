@@ -10,7 +10,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class ObraListComponent implements OnInit {
 
   obras: any = []
-  displayedColumns: String[] = ['titulo', 'edicao', 'ano_edicao', 'numero_paginas', 'numero_copia', 'editora', 'tema', 'autor', 'prateleira', 'editar', 'excluir']
+  displayedColumns: String[] = ['titulo', 'tema', 'autor', 'prateleira', 'numero_copia', 'numero_paginas', 'edicao', 'ano_edicao', 'editora', 'editar', 'excluir']
 
   constructor(private servOb: ObraService, private snackBar: MatSnackBar) { }
 
@@ -26,13 +26,13 @@ export class ObraListComponent implements OnInit {
               // 1) recarregar os dados da tabela
               this.ngOnInit()
               // 2) Dar feedback para o usuario com mensagem
-              this.snackBar.open('Item excluido com sucesso', 'X', {
+              this.snackBar.open('Item excluído com sucesso', 'X', {
                   duration: 5000 // 5 segundos
               })
           }
           catch(erro){
             //3) dar o feedback de erro para o
-            this.snackBar.open('ERRO!!: Não foi possível excluir este item', 'X Que pena', {
+            this.snackBar.open('ERRO: não foi possível excluir este item', 'Que pena', {
                   duration: 5000 // 5 segundos
               })
               console.log(erro)

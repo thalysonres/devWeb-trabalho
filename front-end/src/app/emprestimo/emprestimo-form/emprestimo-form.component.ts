@@ -40,11 +40,11 @@ export class EmprestimoFormComponent implements OnInit {
           try{
             this.emprestimo = await this.servEmp.obterUm( this.actRoute.snapshot.params['id'] )
             // 2 - mudar titulo da pagina
-            this.title = 'Editando emprestimo'
+            this.title = 'Editando empréstimo'
 
         }catch(erro){
               console.log(erro)
-              this.snackBar.open('ERRO: nao foi possivel carregar dados para edicao', 'X(', {
+              this.snackBar.open('ERRO: não foi possível carregar dados para edição', 'X', {
                   duration: 5000
               })
           }
@@ -62,7 +62,7 @@ async salvar(form: NgForm){
 
             if(this.emprestimo._id){
                 await this.servEmp.atualizar(this.emprestimo) // atualizacao
-                this.snackBar.open('Dados ATUALIZADOS com sucesso!!!', 'X', {
+                this.snackBar.open('Dados atualizados com sucesso!!!', 'X', {
                     duration: 5000
                 })
                 // this.location.back()
@@ -74,19 +74,16 @@ async salvar(form: NgForm){
                     duration: 5000
                 })
                 // 3 - voltar ao componente de listagem
-
             }
 
             this.location.back()
         }
         catch(erro){
             console.log(erro)
-            this.snackBar.open('ERRO: nao foi possivel salvar', 'X(', {
+            this.snackBar.open('ERRO: não foi possível salvar', 'X', {
                 duration: 5000
             })
         }
-
-
     }
   }
 
@@ -111,6 +108,5 @@ async salvar(form: NgForm){
       this.snackBar.open('ERRO: não foi possível carregar os dados necessários para a página.', 'Que Pena =/', { duration: 5000 })
     }
   }
-
 
 }

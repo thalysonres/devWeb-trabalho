@@ -31,5 +31,4 @@ listar() {
   atualizar(body : any) {
     return this.http.put(this.apiUri, body).toPromise()
   }
-
 }

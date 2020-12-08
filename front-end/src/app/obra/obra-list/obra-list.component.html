@@ -19,31 +19,6 @@
     <td mat-cell class="cell-align-center" *matCellDef="let obra"> {{obra.titulo}} </td>
   </ng-container>
 
-  <ng-container matColumnDef="edicao">
-    <th mat-header-cell *matHeaderCellDef class="cell-align-center"> Edição </th>
-    <td mat-cell class="cell-align-center" *matCellDef="let obra"> {{obra.edicao}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="ano_edicao">
-    <th mat-header-cell *matHeaderCellDef class="cell-align-center"> Ano da edição </th>
-    <td mat-cell class="cell-align-center" *matCellDef="let obra"> {{obra.ano_edicao}} </td>
-  </ng-container>
-
-   <ng-container matColumnDef="numero_paginas">
-    <th mat-header-cell *matHeaderCellDef class="cell-align-center"> Número de páginas </th>
-    <td mat-cell class="cell-align-center" *matCellDef="let obra"> {{obra.num_paginas}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="numero_copia">
-    <th mat-header-cell *matHeaderCellDef class="cell-align-center"> Número de cópias </th>
-    <td mat-cell class="cell-align-center" *matCellDef="let obra"> {{obra.num_copias}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="editora">
-    <th mat-header-cell *matHeaderCellDef class="cell-align-center"> Editora </th>
-    <td mat-cell class="cell-align-center" *matCellDef="let obra"> {{obra.editora}} </td>
-  </ng-container>
-
   <ng-container matColumnDef="tema">
     <th mat-header-cell *matHeaderCellDef class="cell-align-center"> Tema </th>
     <td mat-cell class="cell-align-center" *matCellDef="let obra"> {{obra.tema}} </td>
@@ -56,7 +31,32 @@
 
   <ng-container matColumnDef="prateleira">
     <th mat-header-cell *matHeaderCellDef class="cell-align-center"> Prateleira </th>
-    <td mat-cell class="cell-align-center" *matCellDef="let obra"> {{obra.prateleira?.corredor}} | {{obra.prateleira?.estante}} </td>
+    <td mat-cell class="cell-align-center" *matCellDef="let obra"> {{obra.prateleira?.corredor}} - {{obra.prateleira?.estante}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="numero_copia">
+    <th mat-header-cell *matHeaderCellDef class="cell-align-center"> Número de cópias </th>
+    <td mat-cell class="cell-align-center" *matCellDef="let obra"> {{obra.num_copias}} </td>
+  </ng-container>
+
+   <ng-container matColumnDef="numero_paginas">
+    <th mat-header-cell *matHeaderCellDef class="cell-align-center"> Número de páginas </th>
+    <td mat-cell class="cell-align-center" *matCellDef="let obra"> {{obra.num_paginas}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="edicao">
+    <th mat-header-cell *matHeaderCellDef class="cell-align-center"> Edição </th>
+    <td mat-cell class="cell-align-center" *matCellDef="let obra"> {{obra.edicao}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="ano_edicao">
+    <th mat-header-cell *matHeaderCellDef class="cell-align-center"> Ano da edição </th>
+    <td mat-cell class="cell-align-center" *matCellDef="let obra"> {{obra.ano_edicao}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="editora">
+    <th mat-header-cell *matHeaderCellDef class="cell-align-center"> Editora </th>
+    <td mat-cell class="cell-align-center" *matCellDef="let obra"> {{obra.editora}} </td>
   </ng-container>
 
   <!-- Nivel bts editar elementos -->

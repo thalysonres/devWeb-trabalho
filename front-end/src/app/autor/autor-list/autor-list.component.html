@@ -1,4 +1,4 @@
-<h1>Listagem de Autores</h1>
+<h1>Listagem de autores</h1>
 
 <mat-toolbar class="new-item">
     <a mat-raised-button color="accent" [routerLink]="['/autor/novo']">
@@ -7,11 +7,7 @@
     </a>
 </mat-toolbar>
 
-<!-- bibliotecarias no lugar de "dataSource" -->
 <table mat-table [dataSource]="autores" class="mat-elevation-z4">
-
-  <!--- Note that these columns can be defined in any order.
-        The actual rendered columns are set as a property on the row definition" -->
 
   <!-- Corredor Column -->
   <ng-container matColumnDef="nome">
@@ -23,21 +19,18 @@
   <ng-container matColumnDef="pais">
     <th mat-header-cell *matHeaderCellDef class="cell-align-center"> País de origem </th>
     <!-- quando o atributo é relacionado e está populado, é necessario -->
-    <!--  -->
     <td mat-cell class="cell-align-center" *matCellDef="let autor"> {{autor.pais_origem}} </td>
   </ng-container>
 
   <ng-container matColumnDef="genero">
     <th mat-header-cell *matHeaderCellDef class="cell-align-center"> Gênero </th>
     <!-- quando o atributo é relacionado e está populado, é necessario -->
-    <!--  -->
     <td mat-cell class="cell-align-center" *matCellDef="let autor"> {{autor.genero}} </td>
   </ng-container>
 
   <ng-container matColumnDef="resumo">
     <th mat-header-cell *matHeaderCellDef class="cell-align-center"> Resumo </th>
     <!-- quando o atributo é relacionado e está populado, é necessario -->
-    <!--  -->
     <td mat-cell class="cell-align-center" *matCellDef="let autor"> {{autor.resumo}} </td>
   </ng-container>
 

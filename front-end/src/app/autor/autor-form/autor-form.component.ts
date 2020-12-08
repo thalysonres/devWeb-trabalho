@@ -29,7 +29,7 @@ export class AutorFormComponent implements OnInit {
 
         }catch(erro){
               console.log(erro)
-              this.snackBar.open('ERRO: nao foi possivel carregar dados para edicao', 'X(', {
+              this.snackBar.open('ERRO: não foi possível carregar dados para edição', 'X', {
                   duration: 5000
               })
           }
@@ -43,7 +43,7 @@ export class AutorFormComponent implements OnInit {
         try{
           if(this.autor._id){
               await this.servAut.atualizar(this.autor) // atualizacao
-              this.snackBar.open('Dados ATUALIZADOS com sucesso!!!', 'X', {
+              this.snackBar.open('Dados atualizados com sucesso!!!', 'X', {
                    duration: 5000
               })
           }else{
@@ -54,12 +54,11 @@ export class AutorFormComponent implements OnInit {
                   duration: 5000
               })
             }
-
           this.location.back()
         }
         catch(erro){
             console.log(erro)
-            this.snackBar.open('ERRO: nao foi possivel salvar', 'X(', {
+            this.snackBar.open('ERRO: não foi possível salvar', 'X', {
                 duration: 5000
             })
         }

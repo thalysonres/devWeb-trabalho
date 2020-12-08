@@ -29,7 +29,7 @@ export class BibliotecariaFormComponent implements OnInit {
 
         }catch(erro){
               console.log(erro)
-              this.snackBar.open('ERRO: nao foi possivel carregar dados para edicao', 'X(', {
+              this.snackBar.open('ERRO: não foi possível carregar dados para edição', 'X', {
                   duration: 5000
               })
           }
@@ -46,7 +46,7 @@ export class BibliotecariaFormComponent implements OnInit {
 
             if(this.bibliotecaria._id){
                 await this.servPrat.atualizar(this.bibliotecaria) // atualizacao
-                this.snackBar.open('Dados ATUALIZADOS com sucesso!!!', 'X', {
+                this.snackBar.open('Dados atualizados com sucesso!!!', 'X', {
                     duration: 5000
                 })
                 // this.location.back()
@@ -58,19 +58,16 @@ export class BibliotecariaFormComponent implements OnInit {
                     duration: 5000
                 })
                 // 3 - voltar ao componente de listagem
-
             }
 
             this.location.back()
         }
         catch(erro){
             console.log(erro)
-            this.snackBar.open('ERRO: nao foi possivel salvar', 'X(', {
+            this.snackBar.open('ERRO: não foi possível salvar', 'X', {
                 duration: 5000
             })
         }
-
-
     }
   }
 
@@ -84,6 +81,4 @@ export class BibliotecariaFormComponent implements OnInit {
     if(result) this.location.back()
   }
 
-
 }
-

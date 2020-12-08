@@ -1,4 +1,4 @@
-<h1>Listagem de Bibliotecarias</h1>
+<h1>Listagem de bibliotecárias</h1>
 
 <mat-toolbar class="new-item">
     <a mat-raised-button color="accent" [routerLink]="['/bibliotecaria/nova']">
@@ -13,17 +13,26 @@
   <!--- Note that these columns can be defined in any order.
         The actual rendered columns are set as a property on the row definition" -->
 
-  <!-- Corredor Column -->
   <ng-container matColumnDef="nome">
     <th mat-header-cell *matHeaderCellDef class="cell-align-center"> Nome </th>
     <td mat-cell class="cell-align-center" *matCellDef="let bibliotecaria"> {{bibliotecaria.nome}} </td>
   </ng-container>
 
-    <!-- Estante Column -->
+  <ng-container matColumnDef="cpf">
+    <th mat-header-cell *matHeaderCellDef class="cell-align-center"> cpf </th>
+    <!-- quando o atributo é relacionado e está populado, é necessario -->
+    <td mat-cell class="cell-align-center" *matCellDef="let bibliotecaria"> {{bibliotecaria.cpf}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="data">
+    <th mat-header-cell *matHeaderCellDef class="cell-align-center"> Data de nascimento </th>
+    <!-- quando o atributo é relacionado e está populado, é necessario -->
+    <td mat-cell class="cell-align-center" *matCellDef="let bibliotecaria"> {{bibliotecaria.data_nascimento | date:'dd/MM/yyyy' }} </td>
+  </ng-container>
+
   <ng-container matColumnDef="telefone">
     <th mat-header-cell *matHeaderCellDef class="cell-align-center"> Telefone </th>
     <!-- quando o atributo é relacionado e está populado, é necessario -->
-    <!--  -->
     <td mat-cell class="cell-align-center" *matCellDef="let bibliotecaria"> {{bibliotecaria.telefone}} </td>
   </ng-container>
 
@@ -32,20 +41,6 @@
     <!-- quando o atributo é relacionado e está populado, é necessario -->
     <!--  -->
     <td mat-cell class="cell-align-center" *matCellDef="let bibliotecaria"> {{bibliotecaria.endereco}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="cpf">
-    <th mat-header-cell *matHeaderCellDef class="cell-align-center"> CPF </th>
-    <!-- quando o atributo é relacionado e está populado, é necessario -->
-    <!--  -->
-    <td mat-cell class="cell-align-center" *matCellDef="let bibliotecaria"> {{bibliotecaria.cpf}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="data">
-    <th mat-header-cell *matHeaderCellDef class="cell-align-center"> Data de nascimento </th>
-    <!-- quando o atributo é relacionado e está populado, é necessario -->
-    <!--  -->
-    <td mat-cell class="cell-align-center" *matCellDef="let bibliotecaria"> {{bibliotecaria.data_nascimento | date:'dd/MM/yyyy' }} </td>
   </ng-container>
 
   <!-- Nivel bts editar elementos -->

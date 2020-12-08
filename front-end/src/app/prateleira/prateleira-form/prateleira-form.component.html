@@ -2,12 +2,6 @@
 
 <form class="std-form" #f="ngForm" (ngSubmit)="salvar(f)">
 
-	<mat-form-field>
-		<mat-label>Estante</mat-label>
-		<input matInput placeholder="Informe o nome da estante"
-      [(ngModel)]="prateleira.estante" name="estante" required>
-  </mat-form-field>
-
 		<mat-form-field>
 			<mat-label>Corredor</mat-label>
 			<input
@@ -15,6 +9,12 @@
       placeholder="Informe o corredor"
       name="corredor" rows="3" required>
 		</mat-form-field>
+
+	<mat-form-field>
+		<mat-label>Estante</mat-label>
+		<input matInput placeholder="Informe o nome da estante"
+      [(ngModel)]="prateleira.estante" name="estante" required>
+  </mat-form-field>
 
   <mat-toolbar class="form-buttons">
       <mat-toolbar-row>

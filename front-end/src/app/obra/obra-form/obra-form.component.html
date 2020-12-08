@@ -10,25 +10,25 @@
 
   <mat-form-field>
 		<mat-label>Edição</mat-label>
-		<input matInput placeholder="Informe a edicao"
+		<input matInput placeholder="Informe a edição"
       [(ngModel)]="obra.edicao" name="edicao">
   </mat-form-field>
 
   <mat-form-field>
 		<mat-label>Ano da edição</mat-label>
-		<input matInput placeholder="Informe o ano edicao"
+		<input matInput placeholder="Informe o ano da edição"
       [(ngModel)]="obra.ano_edicao" name="ano_edicao" required>
   </mat-form-field>
 
   <mat-form-field>
 		<mat-label>Número de páginas</mat-label>
-		<input matInput placeholder="Informe o numero de pagina"
+		<input matInput placeholder="Informe o número de páginas"
       [(ngModel)]="obra.num_paginas" name="num_paginas" required>
   </mat-form-field>
 
   <mat-form-field>
 		<mat-label>Número de cópias</mat-label>
-		<input matInput placeholder="Informe o numero copias"
+		<input matInput placeholder="Informe o número de cópias"
       [(ngModel)]="obra.num_copias" name="num_copias" required>
   </mat-form-field>
 
@@ -40,7 +40,7 @@
 
   <mat-form-field>
 		<mat-label>Tema</mat-label>
-		<input matInput placeholder="Informe a tema"
+		<input matInput placeholder="Informe o tema"
       [(ngModel)]="obra.tema" name="tema" required>
   </mat-form-field>
 
@@ -57,7 +57,7 @@
     <mat-label>Prateleira</mat-label>
     <mat-select [(ngModel)]="obra.prateleira" name="prateleira" required>
       <mat-option *ngFor="let prateleira of prateleiras" [value]="prateleira._id">
-      {{ prateleira.corredor }} | {{ prateleira.estante }}
+      {{ prateleira.corredor }} - {{ prateleira.estante }}
       </mat-option>
     </mat-select>
   </mat-form-field>

@@ -4,32 +4,35 @@
 
 	<mat-form-field>
 		<mat-label>Nome</mat-label>
-		<input matInput placeholder="Informe o nome da Bibliotecaria"
+		<input matInput placeholder="Informe o nome da bibliotecária"
       [(ngModel)]="bibliotecaria.nome" name="nome" required>
   </mat-form-field>
 
   <mat-form-field>
+		<mat-label>cpf</mat-label>
+		<input matInput placeholder="Informe o cpf"
+      [(ngModel)]="bibliotecaria.cpf" mask="000.000.000-00" name="cpf" required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Data de nascimento</mat-label>
+    <input matInput [matDatepicker]="dataNascimento" name="data_nascimento"
+    [(ngModel)]="bibliotecaria.data_nascimento" placeholder="Informe a data de nascimento"
+    required>
+    <mat-datepicker-toggle matSuffix [for]="dataNascimento"></mat-datepicker-toggle>
+    <mat-datepicker #dataNascimento></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field>
 		<mat-label>Telefone</mat-label>
-		<input matInput placeholder="Informe o Telefone"
+		<input matInput placeholder="Informe o telefone"
       [(ngModel)]="bibliotecaria.telefone" name="telefone" required>
   </mat-form-field>
 
   <mat-form-field>
 		<mat-label>Endereço</mat-label>
-		<input matInput placeholder="Informe o Endereço"
+		<input matInput placeholder="Informe o endereço"
       [(ngModel)]="bibliotecaria.endereco" name="endereco" required>
-  </mat-form-field>
-
-  <mat-form-field>
-		<mat-label>CPF</mat-label>
-		<input matInput placeholder="Informe o CPF"
-      [(ngModel)]="bibliotecaria.cpf" name="cpf" required>
-  </mat-form-field>
-
-  <mat-form-field>
-		<mat-label>Data de nascimento</mat-label>
-		<input matInput placeholder="Informe a data de nascimento"
-      [(ngModel)]="bibliotecaria.data_nascimento" name="data" required>
   </mat-form-field>
 
   <mat-toolbar class="form-buttons">

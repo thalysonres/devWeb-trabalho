@@ -5,7 +5,7 @@
   <mat-form-field>
     <mat-label>Data de empréstimo</mat-label>
     <input matInput [matDatepicker]="dataEmprestimo" name="data_emprestimo"
-    [(ngModel)]="emprestimo.data_emprestimo" placeholder="Informe a data de nascimento"
+    [(ngModel)]="emprestimo.data_emprestimo" placeholder="Informe a data de empréstimo"
     required>
     <mat-datepicker-toggle matSuffix [for]="dataEmprestimo"></mat-datepicker-toggle>
     <mat-datepicker #dataEmprestimo></mat-datepicker>
@@ -14,7 +14,7 @@
   <mat-form-field>
     <mat-label>Data de devolução</mat-label>
     <input matInput [matDatepicker]="dataDevolucao" name="data_devolucao"
-    [(ngModel)]="emprestimo.data_devolucao" placeholder="Informe a data de cadastro"
+    [(ngModel)]="emprestimo.data_devolucao" placeholder="Informe a data de devolução"
     required>
     <mat-datepicker-toggle matSuffix [for]="dataDevolucao"></mat-datepicker-toggle>
     <mat-datepicker #dataDevolucao></mat-datepicker>
