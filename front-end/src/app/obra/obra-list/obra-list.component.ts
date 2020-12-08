@@ -20,7 +20,7 @@ export class ObraListComponent implements OnInit {
   }
 
    async excluir(id: string){
-      if(confirm("Dese excluir?")){
+      if(confirm("Deseja excluir?")){
           try {
               await this.servOb.excluir(id)
               // 1) recarregar os dados da tabela
@@ -32,7 +32,7 @@ export class ObraListComponent implements OnInit {
           }
           catch(erro){
             //3) dar o feedback de erro para o
-            this.snackBar.open('ERRO!!: nao foi possivel excluir este item', 'X Que pena', {
+            this.snackBar.open('ERRO!!: Não foi possível excluir este item', 'X Que pena', {
                   duration: 5000 // 5 segundos
               })
               console.log(erro)

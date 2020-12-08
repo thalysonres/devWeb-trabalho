@@ -17,7 +17,7 @@ export class ObraFormComponent implements OnInit {
   obra: any = {}
   autores: any = {}
   prateleiras: any = {}
-  title: string = "Nova Obra"
+  title: string = "Nova obra"
 
   constructor(
     private servOb: ObraService,

@@ -25,7 +25,7 @@ export class AutorFormComponent implements OnInit {
           try{
             this.autor = await this.servAut.obterUm( this.actRoute.snapshot.params['id'] )
 
-            this.title = 'Editando Autor'
+            this.title = 'Editando autor'
 
         }catch(erro){
               console.log(erro)

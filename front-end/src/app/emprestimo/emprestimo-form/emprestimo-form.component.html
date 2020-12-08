@@ -3,7 +3,7 @@
 <form class="std-form" #f="ngForm" (ngSubmit)="salvar(f)">
 
   <mat-form-field>
-    <mat-label>Data de Emprestimo</mat-label>
+    <mat-label>Data de empréstimo</mat-label>
     <input matInput [matDatepicker]="dataEmprestimo" name="data_emprestimo"
     [(ngModel)]="emprestimo.data_emprestimo" placeholder="Informe a data de nascimento"
     required>
@@ -12,7 +12,7 @@
   </mat-form-field>
 
   <mat-form-field>
-    <mat-label>Data de devolucao</mat-label>
+    <mat-label>Data de devolução</mat-label>
     <input matInput [matDatepicker]="dataDevolucao" name="data_devolucao"
     [(ngModel)]="emprestimo.data_devolucao" placeholder="Informe a data de cadastro"
     required>
@@ -30,7 +30,7 @@
   </mat-form-field>
 
   <mat-form-field>
-    <mat-label>Bibliotecaria</mat-label>
+    <mat-label>Bibliotecária</mat-label>
     <mat-select [(ngModel)]="emprestimo.bibliotecaria" name="bibliotecaria" required>
       <mat-option *ngFor="let bibliotecaria of bibliotecarias" [value]="bibliotecaria._id">
       {{ bibliotecaria.nome }}

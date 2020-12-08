@@ -3,7 +3,7 @@
 <mat-toolbar class="new-item">
     <a mat-raised-button color="accent" [routerLink]="['/bibliotecaria/nova']">
         <mat-icon>add_circle</mat-icon>
-        Nova bibliotecaria
+        Nova bibliotecária
     </a>
 </mat-toolbar>
 
@@ -42,10 +42,10 @@
   </ng-container>
 
   <ng-container matColumnDef="data">
-    <th mat-header-cell *matHeaderCellDef class="cell-align-center"> Data Nascimento </th>
+    <th mat-header-cell *matHeaderCellDef class="cell-align-center"> Data de nascimento </th>
     <!-- quando o atributo é relacionado e está populado, é necessario -->
     <!--  -->
-    <td mat-cell class="cell-align-center" *matCellDef="let bibliotecaria"> {{bibliotecaria.data_nascimento}} </td>
+    <td mat-cell class="cell-align-center" *matCellDef="let bibliotecaria"> {{bibliotecaria.data_nascimento | date:'dd/MM/yyyy' }} </td>
   </ng-container>
 
   <!-- Nivel bts editar elementos -->

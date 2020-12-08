@@ -20,7 +20,7 @@ export class AutorListComponent implements OnInit {
   }
 
   async excluir(id: string){
-      if(confirm("Dese excluir?")){
+      if(confirm("Deseja excluir?")){
           try {
               await this.servAutor.excluir(id)
               // 1) recarregar os dados da tabela

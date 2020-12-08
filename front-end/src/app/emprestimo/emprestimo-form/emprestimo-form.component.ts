@@ -20,7 +20,7 @@ export class EmprestimoFormComponent implements OnInit {
   bibliotecarias: any = {}
   obras: any = {}
 
-  title: string = 'Novo emprestimo'
+  title: string = 'Novo empréstimo'
 
   constructor(
     private servEmp: EmprestimoService,

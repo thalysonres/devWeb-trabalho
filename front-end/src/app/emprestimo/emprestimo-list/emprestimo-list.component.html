@@ -3,7 +3,7 @@
 <mat-toolbar class="new-item">
     <a mat-raised-button color="accent" [routerLink]="['/emprestimo/novo']">
         <mat-icon>add_circle</mat-icon>
-        Novo emprestimo
+        Novo empréstimo
     </a>
 </mat-toolbar>
 
@@ -15,13 +15,13 @@
 
   <!-- Corredor Column -->
   <ng-container matColumnDef="data_emprestimo">
-    <th mat-header-cell *matHeaderCellDef class="cell-align-center"> Data Emprestimo </th>
+    <th mat-header-cell *matHeaderCellDef class="cell-align-center"> Data de empréstimo </th>
     <td mat-cell class="cell-align-center" *matCellDef="let emprestimo"> {{emprestimo.data_emprestimo | date:'dd/MM/yyyy' }}</td>
   </ng-container>
 
     <!-- telefone Column -->
   <ng-container matColumnDef="data_devolucao">
-    <th mat-header-cell *matHeaderCellDef class="cell-align-center"> Data Devolucao </th>
+    <th mat-header-cell *matHeaderCellDef class="cell-align-center"> Data de devolução </th>
     <!-- quando o atributo é relacionado e está populado, é necessario -->
     <!--  -->
     <td mat-cell class="cell-align-center" *matCellDef="let emprestimo"> {{emprestimo.data_devolucao | date:'dd/MM/yyyy' }} </td>
@@ -35,7 +35,7 @@
   </ng-container>
 
   <ng-container matColumnDef="bibliotecaria">
-    <th mat-header-cell *matHeaderCellDef class="cell-align-center"> Bibliotecaria </th>
+    <th mat-header-cell *matHeaderCellDef class="cell-align-center"> Bibliotecária </th>
     <!-- quando o atributo é relacionado e está populado, é necessario -->
     <!--  -->
     <td mat-cell class="cell-align-center" *matCellDef="let emprestimo"> {{emprestimo.bibliotecaria?.nome}} </td>

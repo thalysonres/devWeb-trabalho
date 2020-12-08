@@ -3,7 +3,7 @@
 <form class="std-form" #f="ngForm" (ngSubmit)="salvar(f)">
 
 	<mat-form-field>
-		<mat-label>Titulo</mat-label>
+		<mat-label>Título</mat-label>
 		<input matInput placeholder="Informe o titulo da obra"
       [(ngModel)]="obra.titulo" name="titulo" required>
   </mat-form-field>
@@ -11,23 +11,23 @@
   <mat-form-field>
 		<mat-label>Edição</mat-label>
 		<input matInput placeholder="Informe a edicao"
-      [(ngModel)]="obra.edicao" name="edicao" required>
+      [(ngModel)]="obra.edicao" name="edicao">
   </mat-form-field>
 
   <mat-form-field>
-		<mat-label>Ano Edicao</mat-label>
+		<mat-label>Ano da edição</mat-label>
 		<input matInput placeholder="Informe o ano edicao"
       [(ngModel)]="obra.ano_edicao" name="ano_edicao" required>
   </mat-form-field>
 
   <mat-form-field>
-		<mat-label>Numero página</mat-label>
+		<mat-label>Número de páginas</mat-label>
 		<input matInput placeholder="Informe o numero de pagina"
       [(ngModel)]="obra.num_paginas" name="num_paginas" required>
   </mat-form-field>
 
   <mat-form-field>
-		<mat-label>Numero de cópia</mat-label>
+		<mat-label>Número de cópias</mat-label>
 		<input matInput placeholder="Informe o numero copias"
       [(ngModel)]="obra.num_copias" name="num_copias" required>
   </mat-form-field>

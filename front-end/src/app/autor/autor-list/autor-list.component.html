@@ -3,7 +3,7 @@
 <mat-toolbar class="new-item">
     <a mat-raised-button color="accent" [routerLink]="['/autor/novo']">
         <mat-icon>add_circle</mat-icon>
-        Novo Autor
+        Novo autor
     </a>
 </mat-toolbar>
 
@@ -21,7 +21,7 @@
 
     <!-- Estante Column -->
   <ng-container matColumnDef="pais">
-    <th mat-header-cell *matHeaderCellDef class="cell-align-center"> País de Origem </th>
+    <th mat-header-cell *matHeaderCellDef class="cell-align-center"> País de origem </th>
     <!-- quando o atributo é relacionado e está populado, é necessario -->
     <!--  -->
     <td mat-cell class="cell-align-center" *matCellDef="let autor"> {{autor.pais_origem}} </td>

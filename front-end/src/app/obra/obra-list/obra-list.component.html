@@ -13,9 +13,9 @@
   <!--- Note that these columns can be defined in any order.
         The actual rendered columns are set as a property on the row definition" -->
 
-  <!-- Corredor Column -->
+  <!-- título Column -->
   <ng-container matColumnDef="titulo">
-    <th mat-header-cell *matHeaderCellDef class="cell-align-center"> titulo </th>
+    <th mat-header-cell *matHeaderCellDef class="cell-align-center"> Título </th>
     <td mat-cell class="cell-align-center" *matCellDef="let obra"> {{obra.titulo}} </td>
   </ng-container>
 
@@ -25,17 +25,17 @@
   </ng-container>
 
   <ng-container matColumnDef="ano_edicao">
-    <th mat-header-cell *matHeaderCellDef class="cell-align-center"> Ano Edicao </th>
+    <th mat-header-cell *matHeaderCellDef class="cell-align-center"> Ano da edição </th>
     <td mat-cell class="cell-align-center" *matCellDef="let obra"> {{obra.ano_edicao}} </td>
   </ng-container>
 
    <ng-container matColumnDef="numero_paginas">
-    <th mat-header-cell *matHeaderCellDef class="cell-align-center"> Número Paginas </th>
+    <th mat-header-cell *matHeaderCellDef class="cell-align-center"> Número de páginas </th>
     <td mat-cell class="cell-align-center" *matCellDef="let obra"> {{obra.num_paginas}} </td>
   </ng-container>
 
   <ng-container matColumnDef="numero_copia">
-    <th mat-header-cell *matHeaderCellDef class="cell-align-center"> Número cópias </th>
+    <th mat-header-cell *matHeaderCellDef class="cell-align-center"> Número de cópias </th>
     <td mat-cell class="cell-align-center" *matCellDef="let obra"> {{obra.num_copias}} </td>
   </ng-container>
 

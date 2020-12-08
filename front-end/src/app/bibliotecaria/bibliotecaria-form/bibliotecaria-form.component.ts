@@ -15,7 +15,7 @@ export class BibliotecariaFormComponent implements OnInit {
 
   bibliotecaria: any = {}
 
-  title: string = "Nova Bibliotecaria"
+  title: string = "Nova bibliotecária"
 
   constructor(private servPrat: BibliotecariaService, private snackBar: MatSnackBar, private actRoute: ActivatedRoute, private location: Location) { }
 
@@ -25,7 +25,7 @@ export class BibliotecariaFormComponent implements OnInit {
           try{
             this.bibliotecaria = await this.servPrat.obterUm( this.actRoute.snapshot.params['id'] )
 
-            this.title = 'Editando bibliotecaria'
+            this.title = 'Editando bibliotecária'
 
         }catch(erro){
               console.log(erro)

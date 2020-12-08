@@ -15,7 +15,7 @@ export class PrateleiraFormComponent implements OnInit {
 
   prateleira: any = {}
 
-  title: string = "Novo corredor"
+  title: string = "Nova prateleira"
 
 constructor(private servPrat: PrateleiraService, private snackBar: MatSnackBar, private location: Location, private actRoute: ActivatedRoute) { }
 
