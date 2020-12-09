@@ -25,6 +25,7 @@ import { EmprestimoFormComponent } from './emprestimo/emprestimo-form/emprestimo
 import { EstudanteFormComponent } from './estudante/estudante-form/estudante-form.component';
 import { EstudanteListComponent } from './estudante/estudante-list/estudante-list.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MAT_DATE_LOCALE, MAT_DATE_FORMATS } from '@angular/material/core';
 import { MatMomentDateModule, MAT_MOMENT_DATE_FORMATS, MAT_MOMENT_DATE_ADAPTER_OPTIONS } from '@angular/material-moment-adapter';
 import { Moment } from 'moment'
 import { NgxMaskModule, IConfig } from 'ngx-mask'
@@ -61,7 +62,13 @@ import { NgxMaskModule, IConfig } from 'ngx-mask'
     NgxMaskModule.forRoot()
 
   ],
-  providers: [],
+  providers: [
+
+    { provide: MAT_DATE_LOCALE, useValue: 'pt-BR' },
+    { provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS},
+    { provide: MAT_MOMENT_DATE_ADAPTER_OPTIONS, useValue: {useUtc: true}}
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
