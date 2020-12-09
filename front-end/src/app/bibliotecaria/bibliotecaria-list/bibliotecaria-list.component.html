@@ -21,7 +21,7 @@
   <ng-container matColumnDef="cpf">
     <th mat-header-cell *matHeaderCellDef class="cell-align-center"> cpf </th>
     <!-- quando o atributo é relacionado e está populado, é necessario -->
-    <td mat-cell class="cell-align-center" *matCellDef="let bibliotecaria"> {{bibliotecaria.cpf}} </td>
+    <td mat-cell class="cell-align-center" *matCellDef="let bibliotecaria"> {{bibliotecaria.cpf | mask:'000.000.000-00'}} </td>
   </ng-container>
 
   <ng-container matColumnDef="data">
@@ -33,7 +33,7 @@
   <ng-container matColumnDef="telefone">
     <th mat-header-cell *matHeaderCellDef class="cell-align-center"> Telefone </th>
     <!-- quando o atributo é relacionado e está populado, é necessario -->
-    <td mat-cell class="cell-align-center" *matCellDef="let bibliotecaria"> {{bibliotecaria.telefone}} </td>
+    <td mat-cell class="cell-align-center" *matCellDef="let bibliotecaria"> {{bibliotecaria.telefone  | mask:'(00) 00000-0000'}} </td>
   </ng-container>
 
   <ng-container matColumnDef="endereco">
